@@ -55,4 +55,10 @@ class MasterViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let navBarHeight = navigationController?.navigationBar.frame.height {
+            return (tableView.frame.height - navBarHeight)  / CGFloat(imageArray.count)
+        }
+        return (tableView.frame.height - 60)  / CGFloat(imageArray.count)
+    }
 }

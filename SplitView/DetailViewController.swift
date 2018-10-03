@@ -10,11 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var itemImageView: UIImageView!
+
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        itemImageView.image = image
     }
 
 }
-
